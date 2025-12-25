@@ -1,0 +1,12 @@
+[
+  {
+    "id": "brand-1",
+    "name": "Acme Corp",
+    "domain": "acme.com"
+  },
+  {
+    "id": "brand-2",
+    "name": "Nova AI",
+    "domain": "nova.ai"
+  }
+]

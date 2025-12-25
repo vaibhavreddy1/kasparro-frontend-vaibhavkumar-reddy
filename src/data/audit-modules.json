@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ai-visibility",
+    "name": "AI Visibility",
+    "score": 72,
+    "insights": [
+      "Brand rarely appears in AI-generated answers",
+      "Low citation frequency across LLM responses"
+    ],
+    "issues": [
+      "Weak entity recognition",
+      "Limited authoritative mentions"
+    ],
+    "recommendations": [
+      "Strengthen entity schema",
+      "Publish authoritative long-form content"
+    ]
+  },
+  {
+    "id": "eeat",
+    "name": "Trust & EEAT",
+    "score": 81,
+    "insights": [
+      "Strong author attribution signals",
+      "Consistent brand mentions"
+    ],
+    "issues": [],
+    "recommendations": [
+      "Expand author profile coverage",
+      "Improve trust citations"
+    ]
+  },
+  {
+    "id": "non-branded",
+    "name": "Non-Branded Coverage",
+    "score": 65,
+    "insights": [
+      "Low visibility for generic industry queries"
+    ],
+    "issues": [
+      "Content overly brand-focused"
+    ],
+    "recommendations": [
+      "Create educational, non-branded content"
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ai-visibility",
+    "name": "AI Visibility",
+    "score": 72,
+    "insights": ["Low appearance in AI answers"],
+    "issues": ["Weak citation presence"],
+    "recommendations": ["Improve entity signals"]
+  },
+  {
+    "id": "eeat",
+    "name": "Trust & EEAT",
+    "score": 81,
+    "insights": ["Strong author credibility"],
+    "issues": [],
+    "recommendations": ["Expand schema coverage"]
+  }
+]

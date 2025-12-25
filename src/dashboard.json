@@ -1,0 +1,12 @@
+{
+  "brand": {
+    "id": "brand-1",
+    "name": "Example Brand"
+  },
+  "snapshot": {
+    "aiVisibility": 74,
+    "eeat": 81,
+    "nonBrandedCoverage": 63,
+    "lastAudit": "2025-01-12T10:30:00Z"
+  }
+}

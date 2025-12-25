@@ -1,36 +1,167 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kasparro – Frontend Engineering Assignment (V1)
 
-## Getting Started
+This repository contains a frontend implementation of **Kasparro**, an AI-native SEO & Brand Intelligence platform designed for the AI-first search era (ChatGPT, Gemini, Perplexity, etc.).
 
-First, run the development server:
+The goal of this project is not visual polish, but to demonstrate **system thinking, frontend architecture, data modeling, and clear communication of a complex AI product through UI**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application is divided into **two distinct product surfaces**:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Public Website**  
+   Marketing + product narrative to explain Kasparro’s value proposition.
 
-## Learn More
+2. **Product Dashboard (Mocked)**  
+   An authenticated product shell that simulates the core Kasparro experience using structured mocked data.
 
-To learn more about Next.js, take a look at the following resources:
+No backend is used — all product behavior is driven by typed JSON data to reflect real-world frontend constraints.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧱 Tech Stack
 
-## Deploy on Vercel
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Zustand** (state management)
+- **Mocked JSON data** (no backend)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Optional libraries such as shadcn/ui or animation libraries were intentionally avoided to keep focus on clarity and architecture.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🗂️ Folder Structure
+
+src/
+├── app/
+│ ├── layout.tsx # Public website layout
+│ ├── page.tsx # Home (/)
+│ ├── platform/page.tsx # Product overview
+│ ├── about/page.tsx # About / vision
+│ └── app/
+│ ├── layout.tsx # Product dashboard shell
+│ ├── dashboard/page.tsx # Brand snapshot
+│ ├── audit/page.tsx # Core audit screen
+│ └── architecture/page.tsx
+│
+├── components/
+│ ├── layout/ # Layout components
+│ │ ├── PublicNavbar.tsx
+│ │ ├── AppSidebar.tsx
+│ │ └── Footer.tsx
+│ │
+│ ├── audit/ # Feature components
+│ │ ├── AuditModuleList.tsx
+│ │ ├── AuditModuleDetail.tsx
+│ │ └── AuditScore.tsx
+│ │
+│ └── ui/ # UI primitives
+│ ├── Card.tsx
+│ ├── Metric.tsx
+│ └── Section.tsx
+│
+├── data/ # Mocked backend data
+│ ├── brands.json
+│ ├── dashboard.json
+│ └── audit-modules.json
+│
+├── lib/
+│ └── types.ts # Shared TypeScript interfaces
+│
+├── store/
+│ └── useAppStore.ts # Global state (Zustand)
+
+
+This structure enforces a clear separation between **layout**, **features**, **UI primitives**, and **data**, avoiding page-level monoliths.
+
+---
+
+## 🧠 Architectural Decisions
+
+### 1. App Router Layouts
+Separate layouts are used for:
+- Public website (`/`)
+- Product dashboard (`/app`)
+
+This reflects real-world products where marketing and application surfaces evolve independently.
+
+---
+
+### 2. Data-Driven UI
+All product content (dashboard metrics, audit modules, insights) is sourced from structured JSON files.
+
+This:
+- Simulates real backend responses
+- Avoids hard-coded JSX
+- Makes UI predictable and testable
+
+---
+
+### 3. Typed Data Models
+All mocked data conforms to explicit TypeScript interfaces defined in `lib/types.ts`.
+
+This ensures:
+- Consistent schemas
+- No ad-hoc object shapes
+- Easier future backend integration
+
+---
+
+### 4. State Management
+Zustand is used to manage:
+- Selected brand
+- Selected audit module
+
+State flow is intentionally simple and centralized to keep the system easy to reason about.
+
+---
+
+### 5. Component Boundaries
+- **Layout components** handle structure and navigation
+- **Feature components** handle domain-specific UI
+- **UI primitives** are stateless and reusable
+
+This keeps JSX files small and responsibilities clear.
+
+---
+
+## 🎨 UX & Design Approach
+
+- Minimal visual language
+- Clear information hierarchy
+- Dense data presented in readable sections
+- Intentional contrast and spacing for clarity
+
+The focus is on **communicating system behavior**, not visual decoration.
+
+---
+
+## ⚖️ Tradeoffs & Assumptions
+
+### Tradeoffs
+- Mocked data instead of real APIs
+- Minimal animation to avoid UX noise
+- Simple visual components over complex charts
+
+### Assumptions
+- Single active brand context
+- User is already authenticated
+- Audit modules return structured textual insights
+
+---
+
+## 🔮 Future Improvements
+
+- API integration and real authentication
+- Advanced visualizations for audit insights
+- Role-based access control
+- Historical audit comparisons
+
+
+
+## 📝 Final Notes
+
+This project prioritizes **clarity, structure, and system thinking** over pixel perfection.  
+The goal is to demonstrate how a complex AI-native product can be represented through a scalable and maintainable frontend architecture.

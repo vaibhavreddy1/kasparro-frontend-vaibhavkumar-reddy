@@ -7,8 +7,13 @@ export default function Metric({
 }) {
   return (
     <div className="border rounded p-4 bg-white">
-      <p className="text-sm text-gray-500">{label}</p>
-      <p className="text-2xl font-semibold mt-2">{value}</p>
+      <p className="text-xs uppercase tracking-wide text-gray-500">
+  {label}
+</p>
+<p className="text-2xl font-semibold mt-1">
+  {value}
+</p>
+
     </div>
   );
 }

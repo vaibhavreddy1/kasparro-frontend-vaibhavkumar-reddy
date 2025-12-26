@@ -125,6 +125,21 @@ State flow is intentionally simple and centralized to keep the system easy to re
 
 This keeps JSX files small and responsibilities clear.
 
+/////
+Communicating AI-SEO Through Examples
+
+To ground abstract AI-SEO concepts, the public pages include concrete, real-world examples, such as:
+
+A SaaS brand ranking highly on Google but never appearing in ChatGPT answers
+
+Non-branded queries (e.g. “best cloud security platforms”) where competitors are cited instead
+
+Differences between keyword ranking reports and AI citation / trust signals
+
+These examples are used to clearly demonstrate how AI-first search systems behave differently from traditional SEO engines.
+/////
+
+
 ---
 
 ## 🎨 UX & Design Approach

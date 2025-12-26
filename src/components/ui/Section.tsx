@@ -10,7 +10,10 @@ export default function Section({
       <h2 className="font-semibold mb-1">{title}</h2>
 
       {items.length === 0 ? (
-        <p className="text-sm text-gray-500">No issues</p>
+        <p className="text-sm text-gray-500 italic">
+  No issues detected
+</p>
+
       ) : (
         <ul className="list-disc pl-5 text-sm space-y-1">
           {items.map((item, idx) => (

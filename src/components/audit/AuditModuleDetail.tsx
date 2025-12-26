@@ -10,6 +10,7 @@ type AuditModule = {
 import Section from "../ui/Section";
 import AuditScore from "@/components/audit/AuditScore";
 
+
 export default function AuditModuleDetail({ module }: { module: AuditModule }) {
   return (
     <main className="flex-1 p-6 space-y-6 bg-gray-50 text-gray-900">

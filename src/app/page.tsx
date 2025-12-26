@@ -21,6 +21,7 @@ export default function HomePage() {
           Run AI-SEO Audit
         </a>
       </section>
+
       {/* WHY AI-SEO */}
       <section className="max-w-4xl space-y-4">
         <h2 className="text-2xl font-semibold">Why AI-SEO is Different</h2>
@@ -35,7 +36,15 @@ export default function HomePage() {
           <li>Entity trust matters more than keywords</li>
           <li>Brand context is continuously re-evaluated</li>
         </ul>
+
+        {/* ✅ ADDED: concrete example */}
+        <p className="text-gray-600 mt-4">
+          For example, a SaaS company may rank #1 on Google for a keyword, but
+          still never appear in ChatGPT answers because the model does not
+          associate the brand with authority or trust in that category.
+        </p>
       </section>
+
       {/* CORE MODULES */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Core Audit Modules</h2>
@@ -48,6 +57,7 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
       {/* PIPELINE */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">How Kasparro Works</h2>
@@ -57,6 +67,13 @@ export default function HomePage() {
           <div className="border p-4 rounded">AI Audit Modules</div>
           <div className="border p-4 rounded">Actionable Insights</div>
         </div>
+
+        {/* ✅ ADDED: pipeline example */}
+        <p className="text-sm text-gray-600 max-w-xl">
+          Example: Kasparro analyzes how your brand appears in AI-generated
+          answers for non-branded queries like “best cloud security platforms”
+          and identifies why competitors are cited instead.
+        </p>
       </section>
     </main>
   );
